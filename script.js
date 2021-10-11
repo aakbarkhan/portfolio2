@@ -111,7 +111,7 @@ function cardGenerate(data) {
   para.innerText = data[0].text;
   para.className = 'para1';
   const arr = data[0].languages;
-  const [lang1, lang2, lang3,lang4] = arr;
+  const [lang1, lang2, lang3] = arr;
   list1.innerText = lang1;
   list2.innerText = lang3;
   list3.innerText = lang2;
