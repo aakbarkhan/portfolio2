@@ -299,6 +299,9 @@ body {
   
   .frameworks {
     height: 13%;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: top;
   }
   
   .source,
