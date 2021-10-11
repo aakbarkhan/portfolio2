@@ -244,7 +244,9 @@ body {
     width: 375px;
     background-image: url(./assets/shapemobile2.png);
     background-repeat: no-repeat;
-    background-size: 30px 10px;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: top;
     margin: 0 auto;
   }
 
