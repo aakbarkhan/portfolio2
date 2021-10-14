@@ -846,6 +846,10 @@ h5 {
     display: flex;
     flex-direction: column;
   }
+
+  .post {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 992px) {
