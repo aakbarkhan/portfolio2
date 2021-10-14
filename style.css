@@ -244,9 +244,7 @@ body {
     width: 375px;
     background-image: url(./assets/shapemobile2.png);
     background-repeat: no-repeat;
-    background-size: auto;
-    background-attachment: fixed;
-    background-position: top;
+    background-size: 30px 10px;
     margin: 0 auto;
   }
 
@@ -523,6 +521,12 @@ h2 {
   float: right;
   margin-top: -180px;
   margin-left: 300px;
+}
+
+.lang {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #9490ff;
 }
 
 .social-icons {
@@ -845,10 +849,6 @@ h5 {
   .chat {
     display: flex;
     flex-direction: column;
-  }
-
-  .post {
-    text-align: left;
   }
 }
 
