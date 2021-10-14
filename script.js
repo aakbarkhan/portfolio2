@@ -148,6 +148,5 @@ const btnsMobileArr = Array.from(btnn);
 
 btnsMobileArr.forEach((btn, idx) => {
   btn.setAttribute('id', idx);
-
   btnn[idx].addEventListener('click', popUp);
 });
