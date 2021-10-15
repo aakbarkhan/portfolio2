@@ -11,7 +11,7 @@ const formInput = document.querySelectorAll('.input-form');
 formInput.forEach((inp) => {
   inp.addEventListener('input', () => {
     addStorageArr();
-  })
+  });
 });
 if (localStorage.getItem('formData') !== null) {
   let getformData = window.localStorage.getItem('formData');
@@ -20,4 +20,3 @@ if (localStorage.getItem('formData') !== null) {
   document.querySelector('#email').value = getformData.email;
   document.querySelector('#in').value = getformData.message;
 }
-console.log(getformData);
