@@ -1,7 +1,7 @@
 // adds stuffs inside localstorage
 if (localStorage.getItem('formData') !== null) {
-  let getformData = localStorage.getItem('formData');
-  let stringData = JSON.parse(getformData);
+  const getformData = localStorage.getItem('formData');
+  const stringData = JSON.parse(getformData);
   document.getElementById('name_input').value = stringData.name;
   document.getElementById('email').value = stringData.email;
   document.getElementById('in').value = stringData.message;
