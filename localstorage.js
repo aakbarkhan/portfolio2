@@ -16,7 +16,7 @@ function addStorageArr() {
 }
 const formInput = document.querySelectorAll('.input-form');
 formInput.forEach((inp) => {
-  inp.addEventListener('input', () => {
+  inp.addEventListener('change', () => {
     addStorageArr();
   });
 });
