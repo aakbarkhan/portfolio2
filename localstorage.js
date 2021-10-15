@@ -7,19 +7,17 @@ function addStorageArr() {
   const store = JSON.stringify(storObj);
   localStorage.setItem('formData', store);
 }
-
 const formInput = document.querySelectorAll('.input-form');
 formInput.forEach((inp) => {
   inp.addEventListener('input', () => {
-      addStorageArr();
+    addStorageArr();
   })
 });
-
 if (localStorage.getItem('formData') !== null) {
   let getformData = window.localStorage.getItem('formData');
   getformData = JSON.parse(getformData);
-  console.log(getformData);
   document.querySelector('#name_input').value = getformData.name;
   document.querySelector('#email').value = getformData.email;
   document.querySelector('#in').value = getformData.message;
 }
+console.log(getformData);
