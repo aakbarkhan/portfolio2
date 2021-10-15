@@ -6,13 +6,13 @@ function addStorageArr() {
   const storObj = { name, email, message };
   const store = JSON.stringify(storObj);
   localStorage.setItem('formData', store);
-};
+}
 
 const formInput = document.querySelectorAll('.input-form');
 formInput.forEach((inp) => {
   inp.addEventListener('input', () => {
-  addStorageArr();
-  });
+      addStorageArr();
+  })
 });
 
 if (localStorage.getItem('formData') !== null) {
@@ -23,5 +23,3 @@ if (localStorage.getItem('formData') !== null) {
   document.querySelector('#email').value = getformData.email;
   document.querySelector('#in').value = getformData.message;
 }
-
-  
