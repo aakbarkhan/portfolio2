@@ -35,25 +35,25 @@ const data = [
     source: 'See Source',
   },
   {
-    title: 'Google',
-    image: 'assets/SnapshootPortfolio.png',
-    text: '1111 Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
+    title: 'Metrics-webapp',
+    image: 'assets/metricesapp.png',
+    text: 'This app use an external api for the covid infection cases for different countries. Can checked the total number of cases depending on the past date and also can checked using the specific country input or search button. Use react,redux, Html&Css with JS to build this app.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
     source: 'See Source',
   },
   {
-    title: 'Facebook',
-    image: 'assets/SnapshootPortfolio.png',
-    text: '2222  Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
+    title: 'Space Travellers',
+    image: 'assets/spacebooking.png',
+    text: 'The app is all about booking for the space travelling and what spaceship is available to booked, We used React and Redux to update the state and post to the backend databse form the react component to booked.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
     source: 'See Source',
   },
   {
-    title: 'Portfolio',
-    image: 'assets/SnapshootPortfolio.png',
-    text: '3333 Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
+    title: 'Cfood',
+    image: 'assets/cfood.gif',
+    text: 'This project is about seafood items and when the like button is clicked the likes is increase and if people want to give any comment about the food then the person can write any comment in the comment section and post that comment.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
     source: 'See Source',
@@ -108,7 +108,6 @@ function cardGenerate(item) {
   para.innerText = item.text;
   para.className = 'para1';
   const arr = item.languages;
-  console.log(arr);
   const [lang1, lang2, lang3] = arr;
   list1.innerText = lang1;
   list2.innerText = lang3;
