@@ -26,9 +26,9 @@ menuItems.forEach(
 
 const data = [
   {
-    title: 'Multi-Post stories',
-    image: 'assets/SnapshootPortfolio.png',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
+    title: 'Budget App',
+    image: 'assets/budgetapp.png',
+    text: 'The Budget app keeps track of all your Budget, categories, and expenses. It will allow you to save categories, keep track of what you have, create categories, and generate a categories list based on what you have expenses and what you want to add in your expenses. Also, Budget tracking will allow us to know how much we can plan for the month or year and knows exactly the expences.',
 
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
