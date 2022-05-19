@@ -37,7 +37,7 @@ const data = [
   {
     title: 'Google',
     image: 'assets/SnapshootPortfolio.png',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
+    text: '1111 Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
     source: 'See Source',
@@ -45,7 +45,7 @@ const data = [
   {
     title: 'Facebook',
     image: 'assets/SnapshootPortfolio.png',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
+    text: '2222  Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
     source: 'See Source',
@@ -53,17 +53,16 @@ const data = [
   {
     title: 'Portfolio',
     image: 'assets/SnapshootPortfolio.png',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
+    text: '3333 Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh. Velit aliquet sagittis id consectetur. Urna id volutpat lacus laoreet.Fames ac turpis egestas integer eget aliquet nibh praesent tristique.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
     source: 'See Source',
   },
 ];
 
-function cardGenerate(data) {
+function cardGenerate(item) {
   const page = document.createElement('div');
   page.className = 'modelPage';
-
   const title = document.createElement('h2');
   title.className = 'port-title';
   const span = document.createElement('button');
@@ -101,39 +100,39 @@ function cardGenerate(data) {
   btnnice.appendChild(btn1);
   btnnice.appendChild(btn2);
   page.appendChild(btnnice);
-
-  img.src = data[0].image;
+  // data.((item) => {
+  img.src = item.image;
   img.className = 'project-image';
-  title.innerText = data[0].title;
+  title.innerText = item.title;
   span.innerText = 'x';
-
-  para.innerText = data[0].text;
+  para.innerText = item.text;
   para.className = 'para1';
-  const arr = data[0].languages;
+  const arr = item.languages;
+  console.log(arr);
   const [lang1, lang2, lang3] = arr;
   list1.innerText = lang1;
   list2.innerText = lang3;
   list3.innerText = lang2;
 
-  btn1.innerHTML = `${data[0].live} <img id="live-btn" src="./live.png" alt="btn">`;
-  btn2.innerHTML = `${data[0].source} <i id="github" class="fab fa-github"></i>`;
+  btn1.innerHTML = `${item.live} <img id="live-btn" src="./live.png" alt="btn">`;
+  btn2.innerHTML = `${item.source} <i id="github" class="fab fa-github"></i>`;
 
-  const [language1, language2, language3] = data[0].languages;
+  const [language1, language2, language3] = item.languages;
   list1.innerText = language1;
   list2.innerText = language2;
   list3.innerText = language3;
 
-  btn1.innerHTML = `${data[0].live}<img id="live-btn" src="./live.png" alt="btn">`;
-  btn2.innerHTML = `${data[0].source}<i id="github" class="fab fa-github"></i>`;
+  btn1.innerHTML = `${item.live}<img id="live-btn" src="./live.png" alt="btn">`;
+  btn2.innerHTML = `${item.source}<i id="github" class="fab fa-github"></i>`;
+  // });
   const mainContent = document.querySelector('.main');
-
   return mainContent.appendChild(page);
 }
 
 const btnn = document.querySelectorAll('.btn');
 
-function popUp() {
-  document.body.appendChild(cardGenerate(data));
+function popUp(idx) {
+  document.body.appendChild(cardGenerate(data[idx]));
 
   const del = document.querySelector('.modelPage');
   const closeBtn = document.querySelector('.closebtn');
@@ -148,5 +147,5 @@ const btnsMobileArr = Array.from(btnn);
 
 btnsMobileArr.forEach((btn, idx) => {
   btn.setAttribute('id', idx);
-  btnn[idx].addEventListener('click', popUp);
+  btnn[idx].addEventListener('click', () => popUp(idx));
 });
