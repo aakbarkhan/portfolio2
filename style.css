@@ -548,6 +548,10 @@ h2 {
     transition: width 2s, height 3s;
   }
 
+  .new-card-img {
+    height: 526px;
+  }
+
   .card-image:hover {
     width: 97%;
     height: 88%;
