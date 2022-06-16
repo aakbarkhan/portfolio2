@@ -32,7 +32,9 @@ const data = [
 
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
+    link: 'https://bajat.herokuapp.com/',
     source: 'See Source',
+    code: 'https://github.com/aakbarkhan/budget-app',
   },
   {
     title: 'Metrics-webapp',
@@ -40,7 +42,9 @@ const data = [
     text: 'This app use an external api for the covid infection cases for different countries. Can checked the total number of cases depending on the past date and also can checked using the specific country input or search button. Use react,redux, Html&Css with JS to build this app.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
+    link: 'https://coviid.netlify.app/',
     source: 'See Source',
+    code: 'https://github.com/aakbarkhan/metrics-webapp',
   },
   {
     title: 'Space Travellers',
@@ -48,7 +52,9 @@ const data = [
     text: 'The app is all about booking for the space travelling and what spaceship is available to booked, We used React and Redux to update the state and post to the backend databse form the react component to booked.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
+    link: 'https://atoz-space.netlify.app/',
     source: 'See Source',
+    code: 'https://github.com/aakbarkhan/SpaceTravelers',
   },
   {
     title: 'Cfood',
@@ -56,7 +62,9 @@ const data = [
     text: 'This project is about seafood items and when the like button is clicked the likes is increase and if people want to give any comment about the food then the person can write any comment in the comment section and post that comment.',
     languages: ['html', 'css', 'javaScript', 'github', 'Ruby on rails', 'Bootstrap'],
     live: 'See Live',
+    link: 'https://aakbarkhan.github.io/Cfood/dist/',
     source: 'See Source',
+    code: 'https://github.com/aakbarkhan/Cfood',
   },
 ];
 
@@ -90,6 +98,10 @@ function cardGenerate(item) {
 
   page.appendChild(title);
   page.appendChild(span);
+  // const imgdiv = document.createElement('div');
+  // imgdiv.className = 'img-div';
+  // imgdiv.appendChild(img);
+  // page.appendChild(imgdiv);
   page.appendChild(img);
   page.appendChild(para);
   page.appendChild(lang);
@@ -100,7 +112,7 @@ function cardGenerate(item) {
   btnnice.appendChild(btn1);
   btnnice.appendChild(btn2);
   page.appendChild(btnnice);
-  // data.((item) => {
+
   img.src = item.image;
   img.className = 'project-image';
   title.innerText = item.title;
@@ -113,17 +125,20 @@ function cardGenerate(item) {
   list2.innerText = lang3;
   list3.innerText = lang2;
 
-  btn1.innerHTML = `${item.live} <img id="live-btn" src="./live.png" alt="btn">`;
-  btn2.innerHTML = `${item.source} <i id="github" class="fab fa-github"></i>`;
+  // btn1.innerHTML = `${item.live}  <img id="live-btn" src="./live.png" alt="btn">`;
+  // btn2.innerHTML = `${item.source} <i id="github" class="fab fa-github"></i>`;
 
   const [language1, language2, language3] = item.languages;
   list1.innerText = language1;
   list2.innerText = language2;
   list3.innerText = language3;
 
-  btn1.innerHTML = `${item.live}<img id="live-btn" src="./live.png" alt="btn">`;
-  btn2.innerHTML = `${item.source}<i id="github" class="fab fa-github"></i>`;
-  // });
+  // const link = document.createElement('a');
+  // link.setAttribute('https://bajat.herokuapp.com/');
+  // btn1.appendChild(link);
+  btn1.innerHTML = ` <a href=${item.link} target=${item.link} class="a-tag" >  ${item.live}<img id="live-btn" src="./live.png" alt="btn"></a> `;
+  btn2.innerHTML = `<a href=${item.code} target=${item.code} class="a-tag"> ${item.source}<i id="github" class="fab fa-github"></i> </a>`;
+
   const mainContent = document.querySelector('.main');
   return mainContent.appendChild(page);
 }
