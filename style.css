@@ -132,6 +132,11 @@ body {
     display: none;
   }
 
+  .a-tag {
+    text-decoration: none;
+    color: #edecff;
+  }
+
   .discription:hover {
     transition: width 2s, height 2s, transform 2s;
     transform: rotate(360deg);
