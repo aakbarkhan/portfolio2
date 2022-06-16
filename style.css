@@ -137,10 +137,10 @@ body {
     color: #edecff;
   }
 
-  .discription:hover {
+  /* .discription:hover {
     transition: width 2s, height 2s, transform 2s;
     transform: rotate(360deg);
-  }
+  } */
 
   .language-framework-desktop {
     display: grid;
@@ -550,16 +550,10 @@ h2 {
     width: 96%;
     height: 97%;
     text-align: unset;
-    transition: width 2s, height 3s;
   }
 
   .new-card-img {
     height: 526px;
-  }
-
-  .card-image:hover {
-    width: 97%;
-    height: 88%;
   }
 
   .modelPage {

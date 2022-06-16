@@ -98,10 +98,10 @@ function cardGenerate(item) {
 
   page.appendChild(title);
   page.appendChild(span);
-  // const imgdiv = document.createElement('div');
-  // imgdiv.className = 'img-div';
-  // imgdiv.appendChild(img);
-  // page.appendChild(imgdiv);
+  const imgdiv = document.createElement('div');
+  imgdiv.className = 'img-div';
+  imgdiv.appendChild(img);
+  page.appendChild(imgdiv);
   page.appendChild(img);
   page.appendChild(para);
   page.appendChild(lang);
@@ -125,17 +125,11 @@ function cardGenerate(item) {
   list2.innerText = lang3;
   list3.innerText = lang2;
 
-  // btn1.innerHTML = `${item.live}  <img id="live-btn" src="./live.png" alt="btn">`;
-  // btn2.innerHTML = `${item.source} <i id="github" class="fab fa-github"></i>`;
-
   const [language1, language2, language3] = item.languages;
   list1.innerText = language1;
   list2.innerText = language2;
   list3.innerText = language3;
 
-  // const link = document.createElement('a');
-  // link.setAttribute('https://bajat.herokuapp.com/');
-  // btn1.appendChild(link);
   btn1.innerHTML = ` <a href=${item.link} target=${item.link} class="a-tag" >  ${item.live}<img id="live-btn" src="./live.png" alt="btn"></a> `;
   btn2.innerHTML = `<a href=${item.code} target=${item.code} class="a-tag"> ${item.source}<i id="github" class="fab fa-github"></i> </a>`;
 
