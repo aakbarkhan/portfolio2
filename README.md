@@ -30,7 +30,7 @@ The desktop version used media queries above 992px and below 992px in mobile.
 ## Live Demo
 
 The live page is:
-[Live Link](https://aakbarkhan.github.io/Portfolio/)
+[Live Link](https://aakbarkhan.github.io/portfolio2/)
 
 
 ## Authors
