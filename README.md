@@ -2,7 +2,7 @@
 
 # Portfolio: mobile version
 
-> This project is Portfolio mobile version.
+> This project is Portfolio mobile version as well as desktop.
 
 ![screenshot](./assets/mobile-portfolio.png)
 
@@ -17,9 +17,7 @@ This mobile version is tested on galaxy S5.
 
 ![](./assets/email.png)
 
-The desktop version used media queries above 992px and below 992px in mobile. 
-
-
+The desktop version used media queries above 992px and below 992px in mobile.
 
 ## Built With
 
